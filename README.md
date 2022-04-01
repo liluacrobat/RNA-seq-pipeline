@@ -13,3 +13,6 @@ module load qiime2
 conda activate /projects/academic/pidiazmo/projectsoftwares/encode/rna-seq
 
 ```
+python=3.8
+conda install star
+conda install cutadapt
