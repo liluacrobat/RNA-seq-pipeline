@@ -21,3 +21,13 @@ caper run rna-seq-pipeline.wdl -m testrun_metadata.json -i PE_stranded_input.jso
 python=3.8
 conda install star
 conda install cutadapt
+
+## Collect results
+```
+mkdir resm_result
+for x in rep*;do cp $x/*.results resm_result/.;done
+```
+```
+mkdir kallisto_result
+for x in rep*;do cp $x/*.tsv kallisto_result/.;done
+```
