@@ -1,4 +1,5 @@
 # RNA-seq-pipeline
+https://data.4dnucleome.org/resources/data-analysis/rnaseq-processing-pipeline
 
 ```
 #!/bin/sh
