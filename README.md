@@ -32,3 +32,5 @@ for x in rep*;do cp $x/*.results resm_result/.;done
 mkdir kallisto_result
 for x in rep*;do cp $x/*.tsv kallisto_result/.;done
 ```
+## Gene list
+Check gene http://angiogenes.uni-frankfurt.de/gene/ENSMUSG00000105951
