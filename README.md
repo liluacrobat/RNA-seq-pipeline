@@ -34,6 +34,7 @@ for x in rep*;do cp $x/*.tsv kallisto_result/.;done
 ```
 ## Gene list
 Check gene http://angiogenes.uni-frankfurt.de/gene/ENSMUSG00000105951
+
 # Microbiome RNA-seq
 ## Kneaddata filtering
 ```
@@ -60,5 +61,9 @@ kneaddata --input ../__SAMPLE_ID___R1.fastq --input ../__SAMPLE_ID___R2.fastq -d
 
 echo 'Succeed'
 echo '--------------------'
+
+```
+## Metagenomic Analysis Using HUMAnN
+```
 
 ```
