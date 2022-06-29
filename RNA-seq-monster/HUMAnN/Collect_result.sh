@@ -1,12 +1,17 @@
 #!/bin/sh
 
 mkdir tsv_table_raw
+mkdir tsv_table_raw/humann_log
 mkdir tsv_table_raw/genefamilies
 mkdir tsv_table_raw/pathabundance
 mkdir tsv_table_raw/pathcoverage
 for x in *_humann_result; do cp $x/*_genefamilies.tsv tsv_table_raw/genefamilies/.;done
 for x in *_humann_result; do cp $x/*_pathabundance.tsv tsv_table_raw/pathabundance/.;done
 for x in *_humann_result; do cp $x/*_pathcoverage.tsv tsv_table_raw/pathcoverage/.;done
+
+cp *.log tsv_table_raw/humann_log/.
+cp *.sh tsv_table_raw/humann_log/.
+
 
 cd tsv_table_raw
 

@@ -15,7 +15,7 @@ conda activate /projects/academic/pidiazmo/projectsoftwares/metaphlan3
 echo '--------------------'
 echo 'Star ...'
 cat ../__SAMPLE_ID___R1_001_kneaddata_paired_1.fastq ../__SAMPLE_ID___R1_001_kneaddata_paired_2.fastq > __SAMPLE_ID__merged_sample.fastq
-humann --input __SAMPLE_ID__merged_sample.fastq --output __SAMPLE_ID___humann_result --threads 4 --search-mode uniref90
+humann --input __SAMPLE_ID__merged_sample.fastq --output __SAMPLE_ID___humann_result --threads 4 --search-mode uniref90 --taxonomic-profile bugs_list.tsv
 
 echo 'Succeed'
 echo '--------------------'
