@@ -65,5 +65,25 @@ echo '--------------------'
 ```
 ## Metagenomic Analysis Using HUMAnN
 ```
+eval "$(/util/common/python/py38/anaconda-2020.07/bin/conda shell.bash hook)"
+conda activate /projects/academic/pidiazmo/projectsoftwares/metaphlan3
 
+mkdir regrouping
+cp genefamily_cov50.txt regrouping/genefamily.txt
+cd regrouping
+humann_regroup_table -i genefamily.txt -o genefamilies_GO.txt -g uniref90_go
+humann_regroup_table -i genefamily.txt -o genefamilies_KO.txt -g uniref90_ko
+humann_regroup_table -i genefamily.txt -o genefamilies_level4ec.txt -g uniref90_level4ec
+humann_regroup_table -i genefamily.txt -o genefamilies_MetaCyCreaction.txt -g uniref90_rxn
+humann_regroup_table -i genefamilies_level4ec.txt -o genefamilies_KEGGpwy_by_ec.txt -c ec_to_pwy.txt
+humann_regroup_table -i genefamilies_KO.txt -o genefamilies_KEGGpwy_by_ko.txt -c keggc.txt
+
+humann_rename_table --i genefamilies_GO.txt -n go -o genefamilies_GO_w_anno.txt
+humann_rename_table --i genefamilies_KO.txt -n kegg-orthology -o genefamilies_KO_w_anno.txt
+humann_rename_table --i genefamilies_level4ec.txt -n ec -o genefamilies_level4ec_w_anno.txt
+humann_rename_table --i genefamilies_MetaCyCreaction.txt -n metacyc-rxn -o genefamilies_MetaCyCreaction_w_anno.txt
+humann_rename_table --i genefamily.txt -n uniref90 -o genefamilies_UniRef90_w_anno.txt
+
+humann_rename_table --i genefamilies_KEGGpwy_by_ko.txt -c map_kegg-pwy_name.txt -o genefamilies_KEGGpwy_by_ko_w_anno.txt
+humann_rename_table --i genefamilies_level4ec.txt -c pwy_hierarchy.txt -o genefamilies_level4ec_w_anno.txt
 ```
