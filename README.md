@@ -64,6 +64,9 @@ echo '--------------------'
 
 ```
 ## Metagenomic Analysis Using HUMAnN
+Reduce size
+```
+
 ```
 eval "$(/util/common/python/py38/anaconda-2020.07/bin/conda shell.bash hook)"
 conda activate /projects/academic/pidiazmo/projectsoftwares/metaphlan3
