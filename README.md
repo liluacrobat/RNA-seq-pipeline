@@ -64,7 +64,13 @@ echo '--------------------'
 
 ```
 ## Metagenomic Analysis Using HUMAnN
+```
+mkdir mapping_list
+for x in $(ls *_aln-mapped_sorted.bam);do samtools view $x | awk -F'\t' '{ print $1 "\t" $3 }' > mapping_list/$x.txt; done
+```
 Reduce size
+```
+for x in $(ls *merged_sample_diamond_aligned.tsv);do cat $x | awk -F'\t' '{ print $1 "\t" $2 "\t" $3 "\t" $7 "\t" $8 "\t" $9 "\t" $10 "\t" $11 }' > mapping_list/$x.txt; done
 ```
 
 ```
