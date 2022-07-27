@@ -97,3 +97,16 @@ humann_rename_table --i genefamilies_KEGGpwy_by_ko.txt -c map_kegg-pwy_name.txt 
 humann_rename_table --i genefamilies_KEGGpwy_by_ec.txt -c pwy_hierarchy_renamed.txt -o genefamilies_KEGGpwy_by_ec_w_anno.txt
 
 ```
+Collect humann mapping files
+```
+mkdir diamond_r
+mkdir bowtie2_r
+xx=/panfs/panfs.cbls.ccr.buffalo.edu/scratch/grp-sunstar/lu/RNA_monster_06_23_2022/RNA/MM_used/sh
+for f in *_humann_result;
+    do cd $f;
+        for x in *_humann_temp;
+            do mv $x/*_diamond_aligned.tsv ../diamond_r/. | mv $x/*_bowtie2_aligned.tsv ../bowtie2_r/.;
+            done;
+        cd $xx
+    done
+```
