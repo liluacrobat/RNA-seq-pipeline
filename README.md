@@ -93,7 +93,7 @@ humann_rename_table --i genefamilies_level4ec.txt -n ec -o genefamilies_level4ec
 humann_rename_table --i genefamilies_MetaCyCreaction.txt -n metacyc-rxn -o genefamilies_MetaCyCreaction_w_anno.txt
 humann_rename_table --i genefamily.txt -n uniref90 -o genefamilies_UniRef90_w_anno.txt
 
-humann_rename_table --i genefamilies_KEGGpwy_by_ko.txt -c map_kegg-pwy_name.txt -o genefamilies_KEGGpwy_by_ko_w_anno.txt
+humann_rename_table --i genefamilies_KEGGpwy_by_ko.txt -c pwy_hierarchy_renamed.txt -o genefamilies_KEGGpwy_by_ko_w_anno.txt
 humann_rename_table --i genefamilies_KEGGpwy_by_ec.txt -c pwy_hierarchy_renamed.txt -o genefamilies_KEGGpwy_by_ec_w_anno.txt
 
 ```
