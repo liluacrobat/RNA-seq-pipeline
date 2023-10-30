@@ -1,4 +1,5 @@
 # RNA-seq-pipeline
+## ENCODE RNA-seq pipeline
 https://data.4dnucleome.org/resources/data-analysis/rnaseq-processing-pipeline
 
 ```
@@ -19,9 +20,12 @@ conda activate /projects/academic/pidiazmo/projectsoftwares/encode/rna-seq
 caper run rna-seq-pipeline.wdl -m testrun_metadata.json -i PE_stranded_input.json -b local --singularity
 
 ```
+
 python=3.8
 conda install star
 conda install cutadapt
+
+testrun_metadata.json is output.
 
 ## Collect results
 ```
