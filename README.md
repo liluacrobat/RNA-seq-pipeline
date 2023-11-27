@@ -76,6 +76,22 @@ Reduce size
 ```
 for x in $(ls *merged_sample_diamond_aligned.tsv);do cat $x | awk -F'\t' '{ print $1 "\t" $2 "\t" $3 "\t" $7 "\t" $8 "\t" $9 "\t" $10 "\t" $11 }' > mapping_list/$x.txt; done
 ```
+File name: $DIR/$SAMPLENAME_$TRANSLATEDALIGN_aligned.tsv
+This file is the alignment results from the translated alignment step.
+This file is formatted as a tab-delimited blast-like results file (blast m8 format).
+The columns in this file are as follows:
+Column 1: Query sequence name
+Column 2: Reference sequence name
+Column 3: Percent identity
+Column 4: Alignment length
+Column 5: Mismatches
+Column 6: Gap opening
+Column 7: Query start
+Column 8: Query end
+Column 9: Reference start
+Column 10: Reference end
+Column 11: E-value
+Column 12: Bit score
 ## Regroup table
 ```
 eval "$(/util/common/python/py38/anaconda-2020.07/bin/conda shell.bash hook)"
