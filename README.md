@@ -1,6 +1,6 @@
 # RNA-seq-pipeline
 ## ENCODE RNA-seq pipeline
-https://data.4dnucleome.org/resources/data-analysis/rnaseq-processing-pipeline\
+https://data.4dnucleome.org/resources/data-analysis/rnaseq-processing-pipeline \
 https://github.com/ENCODE-DCC/rna-seq-pipeline
 
 ```
